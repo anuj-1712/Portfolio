@@ -1,53 +1,33 @@
 import React from "react";
-import burgerIcon from "../assets/burgericon.png";
-import Sidebar from "./Sidebar";
+import { IconContext } from "react-icons";
+import { ImFilesEmpty } from "react-icons/im";
 
-export default function Navbar() {
-  const openNav = () =>{
-    document.getElementById("sidenav").style.width = "200px"
-  }
-  const closeNav = () =>{
-    document.getElementById("sidenav").style.width = "0px"
-  }
+export default function Navbar({openExplorer}) {
   return (
     <>
-      <div className="flex w-full justify-between">
-        <nav className="flex w-screen justify-between pt-6 mb-6 items-center h-1/2">
-          <h1 className="text-2xl md:text-4xl font-serif font-bold text-white ml-8 lg:ml-28 xl:ml-40">
-            Anuj
-          </h1>
-          <ul className="sm:flex justify-evenly gap-4 w-1/2 items-center hidden ">
-            <li>
-              <a href="#home" className="font-sans lg:text-2xl text-white hover:text-green-400">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="font-sans lg:text-2xl text-white hover:text-green-400">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#skills" className="font-sans lg:text-2xl text-white hover:text-green-400">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="#projects" className="font-sans lg:text-2xl text-white hover:text-green-400">
-                Projects
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button onClick={openNav}>
-          <img
-            src={burgerIcon}
-            alt="burger icon"
-            className="sm:hidden block h-6 mr-20"
-          />
-        </button>
+      <div className="flex w-full bg-black border-0 border-t-[1px] border-b-[1px] border-[#4b4747] fixed top-8 z-10">
+        <a
+          href="home"
+          className="sm:text-sm text-xs text-slate-400 opacity-90 text-center sm:w-[120px] w-1/4 py-2 nav-links montserrat"
+        >
+          _hello
+        </a>
+        <a
+          href="#about"
+          className="sm:text-sm text-xs text-slate-400 opacity-90 text-center sm:w-[120px] w-1/4 py-2 border-r-[1px] border-l-[1px] border-[#4b4747] nav-links montserrat"
+        >
+          _about_me
+        </a>
+        <a
+          href="#projects"
+          className="sm:text-sm text-xs text-slate-400 opacity-90 text-center sm:w-[120px] w-1/4 py-2 border-r-[1px] border-[#4b4747] nav-links montserrat"
+        >
+          _projects
+        </a>
+        <IconContext.Provider value={{className:"file-icon"}}>
+          <ImFilesEmpty onClick={openExplorer}/>
+        </IconContext.Provider>
       </div>
-      <Sidebar closeNav={closeNav}/>
     </>
   );
 }

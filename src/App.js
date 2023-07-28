@@ -1,21 +1,33 @@
-
-import './App.css';
-import About from './Components/About';
-import Hero from './Components/Hero';
-import Navbar from './Components/Navbar';
-import Project from './Components/Project';
-import Skills from './Components/Skills';
-import Footer from './Components/Footer';
+import "./App.css";
+import About from "./Components/About";
+import Explorer from "./Components/Explorer";
+import Footer from "./Components/Footer";
+// import About from "./Components/About";
+// import Hero from "./Components/Hero";
+// import Navbar from "./Components/Navbar";
+// import Project from "./Components/Project";
+// import Skills from "./Components/Skills";
+// import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
+import Navbar from "./Components/Navbar";
+import Project from "./Components/Project";
 
 function App() {
+  const openExplorer = () =>{
+    document.getElementById("explorer").style.display = "flex"
+  }
+
+  const closeExplorer = () =>{
+    document.getElementById("explorer").style.display ="none"
+  }
   return (
     <>
-    <div style={{background:'linear-gradient(45deg, #0E2954, #0079FF)'}} id='home'>
-    <Navbar />
+    <Header />
+    <Navbar openExplorer={openExplorer}/>
+    <Explorer closeExplorer={closeExplorer}/>
     <Hero />
-    </div>
     <About />
-    <Skills />
     <Project />
     <Footer />
     </>

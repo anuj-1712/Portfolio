@@ -13,22 +13,22 @@ export default function Sidebar({closeNav}) {
         </button>
         <ul className="flex flex-col gap-8 mt-20 justify-center items-center">
           <li>
-            <a href="#home" className="font-sans lg:text-2xl text-white">
+            <a href="#home" className="font-sans lg:text-2xl text-white" onClick={closeNav}>
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="font-sans lg:text-2xl text-white">
+            <a href="#about" className="font-sans lg:text-2xl text-white" onClick={closeNav}>
               About
             </a>
           </li>
           <li>
-            <a href="#skills" className="font-sans lg:text-2xl text-white">
+            <a href="#skills" className="font-sans lg:text-2xl text-white" onClick={closeNav}>
               Skills
             </a>
           </li>
           <li>
-            <a href="#projects" className="font-sans lg:text-2xl text-white">
+            <a href="#projects" className="font-sans lg:text-2xl text-white" onClick={closeNav}>
               Projects
             </a>
           </li>

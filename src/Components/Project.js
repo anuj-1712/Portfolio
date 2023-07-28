@@ -1,30 +1,59 @@
 import React from "react";
-import weatherApp from "../assets/Weather App.png";
-import todoApp from "../assets/WebTick.png";
-import calculator from "../assets/Calculator.png";
 
 export default function Project() {
+
+  const projects = [
+    {
+      id: 1,
+      name: "Weather App",
+      description:
+        "I built a small Weather App using React, Tailwind CSS and Open Weather api . This app detects the current location of the user(if the user allows the location otherwise it shows a loading screen) and on the basis of that shows the real-time weather of that locality . There are two key features in this app. One is that users can add different locations and check their weather condition in a card form . Another key feature is dynamic background",
+      source: "https://github.com/anuj-1712/Weather-App",
+      url: "https://anuj-1712.github.io/Weather-App/",
+      imageUrl:
+        "https://images.pexels.com/photos/17246558/pexels-photo-17246558/free-photo-of-lightning-over-buildings.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 2,
+      name: "Todo App",
+      description:
+        "I built a common Todo app using React and Bootstrap. This app allows the users to add and keep a track of their to-do activities and also allows them to delete it . One key feature in this app is that user can also edit their todo list item , if they entered some wrong input.",
+      source: "https://github.com/anuj-1712/Todo-app",
+      url: "https://anuj-1712.github.io/Todo-app/",
+      imageUrl:"https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ];
   return (
-    <div className="bg-slate-200 py-8 " id="projects">
-      <h2
-        className="text-5xl font-mono font-medium text-blue-500 text-center"
-      >
-        Projects
-      </h2>
-      <div className="my-6 flex flex-row flex-wrap px-4 justify-evenly gap-6">
-        <div className="flex flex-col justify-center items-center border-2 border-blue-200 shadow-md py-4 w-3/4 md:w-2/4 bg-blue-200 rounded-lg" style={{minWidth:"250px"}}>
-          <img src={weatherApp} alt="weather app" className=" object-contain w-11/12" style={{aspectRatio:"4/2" , minHeight:"180px" , minWidth:"200px"}} />
-          <a href="https://anuj-1712.github.io/Weather-App/" target="_blank" rel="noreferrer" className="text-2xl sm:text-3xl mt-4 text-black font-bold">Weather App <i className="fa-solid fa-up-right-from-square text-red-500"></i></a>
-        </div>
-        <div className="flex flex-col justify-center items-center border-2 border-blue-200 shadow-md py-4 w-3/4 md:w-2/4 bg-blue-200 rounded-lg" style={{minWidth:"250px"}}>
-          <img src={todoApp} alt="Todo App"  className=" object-contain w-11/12" style={{aspectRatio:"4/2" , minHeight:"180px" , minWidth:"200px"}}/>
-          <a href="https://anuj-1712.github.io/Todo-app/" target="_blank" rel="noreferrer" className="text-2xl sm:text-3xl mt-4 text-black font-bold">Todo App <i className="fa-solid fa-up-right-from-square text-red-500"></i></a>
-        </div>
-        <div className="flex flex-col justify-center items-center border-2 border-blue-200 shadow-md py-4 w-3/4 md:w-2/4 bg-blue-200 rounded-lg" style={{minWidth:"250px"}}>
-          <img src={calculator} alt="Calculator"  className=" object-contain w-11/12" style={{aspectRatio:"4/2" , minHeight:"180px" , minWidth:"200px"}}/>
-          <a href="https://anuj-1712.github.io/Calculator/" target="_blank" rel="noreferrer" className="text-2xl sm:text-3xl mt-4 text-black font-bold">Calculator <i className="fa-solid fa-up-right-from-square text-red-500"></i></a>
+    <>
+      <div className="w-11/12 md:w-9/12 md:mx-auto mx-4 h-screen bottom" id="projects">
+        <h2 className="text-white mb-8">// Personal Projects</h2>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
+          {projects.map((project) => {
+            return (
+              <div key={project.id} className="flex flex-col my-6 gap-6">
+                {/* project name and image */}
+                <div className="flex flex-col gap-4 bg-[#020c18] border-[1px] border-[#4b4747] rounded-md px-4 py-4">
+                  <h3 className="text-[#E7B10A] rubik">{project.name}</h3>
+                  <div
+                    className="w-full h-[350px] border-[1px] border-white opacity-80 rounded-lg"
+                    style={{ backgroundImage: `url(${project.imageUrl})`,backgroundSize:"100%" }}
+                  >
+                    <a href={project.url} target="_blank" rel="noreferrer"><button className="bg-[#E7B10A] h-[30px] w-full relative top-[70%] font-bold">
+                      See the project
+                    </button></a>
+                  </div>
+                </div>
+
+                {/* project description */}
+                <p className="text-white text-sm montserrat">
+                  {project.description}
+                </p>
+                <a href={project.source} target="_blank" rel="noreferrer"><button className="text-sky-300 h-12 w-40  border-[1px] border-[#4b4747] rounded-md ">View Source Code</button></a>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </>
   );
 }

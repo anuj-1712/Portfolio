@@ -1,5 +1,124 @@
-*,::after,::before{
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #020c18;
+}
+
+/* font utilities*/
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.rubik{
+  font-family: 'Rubik', sans-serif;
+}
+
+/* hover effect on nav-links */
+.nav-links:hover{
+  background-color: #020c18;
+  border-top: 1px solid red;
+  border-bottom: 1px solid #020c18;
+  border-left: 0px;
+  border-right: 0px;
+  color: #FD8D14;
+  font-weight: 700;
+}
+
+/* styling social icons */
+.social-icons{
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+  color: grey;
+}
+
+.social-icons:hover{
+  color: #FD8D14;
+  object-fit: fill;
+  cursor: pointer;
+}
+
+.file-icon{
+  color: skyblue;
+  height: 20px;
+  width: 20px;
+  position: fixed;
+  right: 1%;
+  top: 40px;
+}
+
+.file-icon:hover{
+  cursor: pointer;
+}
+
+
+.skills-folder{
+  color: red;
+  height: 20px;
+  width: 20px;
+}
+
+.skill-icons , .interest-icons , .edu-icons{
+  color: skyblue;
+  height: 20px;
+  width: 20px;
+}
+
+.edu-folder{
+  color: yellow;
+  height: 20px;
+  width: 20px;
+}
+
+.interests-folder{
+  color: lightgreen;
+  height: 20px;
+  width: 20px;
+}
+
+.edu-sub-folder{
+  color: rgb(21, 151, 226);
+  height: 20px;
+  width: 20px;
+}
+
+.arrow-icon{
+  color: white;
+}
+
+.arrow-icon:hover{
+  cursor: pointer;
+}
+
+.bottom{
+  margin-bottom: 10rem;
+}
+
+/* media queries */
+@media screen and (max-width:767px) {
+  .bottom{
+    margin-bottom: 50rem;
+  }
+}
+
+@media screen and (max-height:450px) {
+  .bottom{
+    margin-bottom: 20rem;
+  }
+}
+
+@media screen and (min-height:451px) and (max-height:650px) {
+  .bottom{
+    margin-bottom: 20rem;
+  }
 }
