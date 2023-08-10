@@ -59,7 +59,7 @@ export default function About() {
                   *
                 </p>
                 <p className="text-slate-400 lg:text-xl sm:text-sm text-xs">
-                  ensure seamless user experiences across various devices.
+                  ensure seamless user experiences
                 </p>
               </div>
               <div className="flex items-start gap-1">
@@ -67,8 +67,7 @@ export default function About() {
                   *
                 </p>
                 <p className="text-slate-400 lg:text-xl sm:text-sm text-xs">
-                  Comfortable with version control systems like Git for
-                  collaborative development.
+                  across various devices.
                 </p>
               </div>
               <div className="flex items-start gap-1">
@@ -76,7 +75,15 @@ export default function About() {
                   *
                 </p>
                 <p className="text-slate-400 lg:text-xl sm:text-sm text-xs">
-                  for collaborative development.
+                  Comfortable with version control systems like
+                </p>
+              </div>
+              <div className="flex items-start gap-1">
+                <p className="text-slate-400 lg:text-xl sm:text-sm text-xs">
+                  *
+                </p>
+                <p className="text-slate-400 lg:text-xl sm:text-sm text-xs">
+                  git for collaborative development.
                 </p>
               </div>
               <div className="flex items-start gap-1">

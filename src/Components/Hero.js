@@ -1,5 +1,5 @@
 import React from "react";
-import myImg from "../assets/IMG20221209143118~2 (1).jpg";
+import myImg from "../assets/FaceApp_1690984665910~2.jpg";
 
 export default function Hero() {
   return (
@@ -45,8 +45,7 @@ export default function Hero() {
         <img
           src={myImg}
           alt="anuj"
-          className="w-[30%] rounded-[50%] min-w-[280px] max-w-[430px]"
-          style={{ boxShadow: "#506275 4px -4px 50px 7px" }}
+          className="w-8/12 sm:w-[40%] rounded-[10%] min-w-[280px] max-w-[350px] max-h-[400px]"
         />
       </div>
     </>
