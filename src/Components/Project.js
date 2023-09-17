@@ -15,13 +15,13 @@ export default function Project() {
     },
     {
       id: 2,
-      name: "Weather App",
+      name: "Resume Builder",
       description:
-        "I built a small Weather App using React, Tailwind CSS and Open Weather api . This app detects the current location of the user(if the user allows the location otherwise it shows a loading screen) and on the basis of that shows the real-time weather of that locality . There are two key features in this app. One is that users can add different locations and check their weather condition in a card form . Another key feature is dynamic background",
-      source: "https://github.com/anuj-1712/Weather-App",
-      url: "https://anuj-1712.github.io/Weather-App/",
+        "I built a Resume Builder site using React,Vite and Material Ui . This app helps user to build a professional resume on the basis of their experience .",
+      source: "https://github.com/anuj-1712/Resume-Builder",
+      url: "https://anuj-1712.github.io/Resume-Builder/",
       imageUrl:
-        "https://images.pexels.com/photos/17246558/pexels-photo-17246558/free-photo-of-lightning-over-buildings.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://designcuts.b-cdn.net/wp-content/uploads/2023/03/simple-resume-cv-template-editable.jpg",
     },
     {
       id: 3,
